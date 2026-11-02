@@ -64,9 +64,11 @@ class SomatSmartwashConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     },
                 )
 
-            except SomatAuthError:
+            except SomatAuthError as err:
+                _LOGGER.warning("Authentication failed: %s", err)
                 errors["base"] = "invalid_auth"
-            except SomatConnectionError:
+            except SomatConnectionError as err:
+                _LOGGER.error("Connection failed: %s", err)
                 errors["base"] = "cannot_connect"
             except Exception as err:  # pylint: disable=broad-except
                 _LOGGER.exception("Unexpected exception during config flow: %s", err)
@@ -115,9 +117,11 @@ class SomatSmartwashConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 )
                 return self.async_abort(reason="reauth_successful")
 
-            except SomatAuthError:
+            except SomatAuthError as err:
+                _LOGGER.warning("Authentication failed: %s", err)
                 errors["base"] = "invalid_auth"
-            except SomatConnectionError:
+            except SomatConnectionError as err:
+                _LOGGER.error("Connection failed: %s", err)
                 errors["base"] = "cannot_connect"
             except Exception:  # pylint: disable=broad-except
                 errors["base"] = "unknown"

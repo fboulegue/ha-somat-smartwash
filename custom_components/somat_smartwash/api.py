@@ -75,7 +75,7 @@ class SomatSmartwashApiClient:
                         f"Gigya HTTP error {response.status}: {text}"
                     )
 
-                data = await response.json()
+                data = await response.json(content_type=None)
                 if data.get("errorCode") != 0 or "id_token" not in data:
                     error_msg = data.get("errorMessage", "Unknown error")
                     error_details = data.get("errorDetails", "")
@@ -131,7 +131,7 @@ class SomatSmartwashApiClient:
                         f"Somat API HTTP error {response.status}: {text}"
                     )
 
-                result = await response.json()
+                result = await response.json(content_type=None)
                 if "errors" in result and result["errors"]:
                     err = result["errors"][0]
                     msg = err.get("message", "Unknown GraphQL error")
