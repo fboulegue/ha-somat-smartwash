@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#03A9F4" />
+      <stop offset="100%" stop-color="#00695C" />
+    </linearGradient>
+    <linearGradient id="fillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00C853" />
+      <stop offset="100%" stop-color="#00E676" />
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+    <style>
+      .font { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .title { font-weight: 600; font-size: 20px; fill: #FFFFFF; }
+      .subtitle { font-size: 13px; fill: #9E9E9E; }
+      .label { font-size: 14px; font-weight: 500; fill: #B0BEC5; }
+      .value { font-size: 15px; font-weight: 600; fill: #ECEFF1; }
+      .status-pill { font-size: 12px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="480" fill="#101419" rx="16" />
+
+  <!-- HA Lovelace Card Container -->
+  <g transform="translate(60, 40)" filter="url(#cardShadow)">
+    <rect width="680" height="400" rx="16" fill="#1C2128" stroke="#30363D" stroke-width="1.5" />
+
+    <!-- Card Header -->
+    <g transform="translate(32, 28)">
+      <!-- Somat Icon / Avatar -->
+      <rect width="48" height="48" rx="12" fill="url(#headerGrad)" />
+      <path d="M 24 14 L 32 23 C 34 26 34 30 31 33 C 28 36 20 36 17 33 C 14 30 14 26 16 23 Z" fill="#FFFFFF" />
+      <circle cx="21" cy="27" r="1.5" fill="#00695C" />
+
+      <!-- Title & Subtitle -->
+      <text x="64" y="22" class="font title">Somat smartwash</text>
+      <text x="64" y="40" class="font subtitle">Henkel • Automatic Dishwasher Dosing</text>
+
+      <!-- Connection Status Badge -->
+      <rect x="520" y="8" width="96" height="28" rx="14" fill="#1B382B" stroke="#00C853" stroke-width="1" />
+      <circle cx="536" cy="22" r="4" fill="#00E676" />
+      <text x="548" y="26" class="font status-pill" fill="#00E676">READY</text>
+    </g>
+
+    <line x1="32" y1="96" x2="648" y2="96" stroke="#30363D" stroke-width="1" />
+
+    <!-- Section: Detergent Fill Level -->
+    <g transform="translate(32, 116)">
+      <text x="0" y="20" class="font label">Detergent Fill Level</text>
+      <text x="616" y="20" class="font value" text-anchor="end" fill="#00E676">100%</text>
+
+      <!-- Fill Progress Bar -->
+      <rect x="0" y="32" width="616" height="12" rx="6" fill="#2D333B" />
+      <rect x="0" y="32" width="616" height="12" rx="6" fill="url(#fillGrad)" />
+      <text x="0" y="60" class="font subtitle">Duo-chamber cartridge inserted • ~30 washes remaining</text>
+    </g>
+
+    <!-- Section: Current State & Program -->
+    <g transform="translate(32, 206)">
+      <!-- Left: Wash Cycle Status -->
+      <g>
+        <rect width="296" height="76" rx="10" fill="#22272E" stroke="#30363D" stroke-width="1" />
+        <text x="16" y="28" class="font subtitle">Wash Cycle Status</text>
+        <text x="16" y="56" class="font value">Idle (Ready to wash)</text>
+        <circle cx="264" cy="38" r="8" fill="#374151" />
+        <path d="M 261 38 L 263 40 L 267 36" stroke="#9E9E9E" stroke-width="2" fill="none" stroke-linecap="round" />
+      </g>
+
+      <!-- Right: Active Program -->
+      <g transform="translate(320, 0)">
+        <rect width="296" height="76" rx="10" fill="#22272E" stroke="#30363D" stroke-width="1" />
+        <text x="16" y="28" class="font subtitle">Active Dosing Program</text>
+        <text x="16" y="56" class="font value" fill="#40C4FF">Intense</text>
+        <!-- Program selector button pills -->
+        <rect x="180" y="38" width="50" height="24" rx="6" fill="#0288D1" />
+        <text x="205" y="54" class="font" font-size="11" font-weight="600" fill="#FFFFFF" text-anchor="middle">INTENSE</text>
+        <rect x="236" y="38" width="46" height="24" rx="6" fill="#2D333B" />
+        <text x="259" y="54" class="font" font-size="11" font-weight="500" fill="#9E9E9E" text-anchor="middle">ECO</text>
+      </g>
+    </g>
+
+    <!-- Bottom Diagnostics Bar -->
+    <g transform="translate(32, 312)">
+      <rect width="616" height="60" rx="10" fill="#161B22" stroke="#30363D" stroke-width="1" />
+
+      <!-- Battery -->
+      <g transform="translate(24, 20)">
+        <text x="0" y="14" class="font subtitle">Battery</text>
+        <text x="0" y="32" class="font value" fill="#00E676">OK (Healthy)</text>
+      </g>
+
+      <line x1="160" y1="12" x2="160" y2="48" stroke="#30363D" stroke-width="1" />
+
+      <!-- Cartridge -->
+      <g transform="translate(184, 20)">
+        <text x="0" y="14" class="font subtitle">Cartridge</text>
+        <text x="0" y="32" class="font value">Inserted</text>
+      </g>
+
+      <line x1="310" y1="12" x2="310" y2="48" stroke="#30363D" stroke-width="1" />
+
+      <!-- Water Hardness -->
+      <g transform="translate(334, 20)">
+        <text x="0" y="14" class="font subtitle">Water Hardness</text>
+        <text x="0" y="32" class="font value">Normal</text>
+      </g>
+
+      <line x1="470" y1="12" x2="470" y2="48" stroke="#30363D" stroke-width="1" />
+
+      <!-- Wi-Fi Signal -->
+      <g transform="translate(494, 20)">
+        <text x="0" y="14" class="font subtitle">Wi-Fi Signal</text>
+        <text x="0" y="32" class="font value">-67 dBm</text>
+      </g>
+    </g>
+  </g>
+</svg>

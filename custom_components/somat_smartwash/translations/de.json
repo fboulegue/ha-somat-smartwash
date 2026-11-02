@@ -1,0 +1,83 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Mit Somat Smartwash verbinden",
+        "description": "Gib deine Somat Smartwash Zugangsdaten ein (E-Mail und Passwort aus der Somat smartwash App).",
+        "data": {
+          "email": "E-Mail-Adresse",
+          "password": "Passwort"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Somat Smartwash neu authentifizieren",
+        "description": "Bitte gib dein Passwort für {email} erneut ein, um die Verbindung wiederherzustellen.",
+        "data": {
+          "password": "Passwort"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Ungültige E-Mail-Adresse oder Passwort. Bitte Zugangsdaten prüfen.",
+      "cannot_connect": "Verbindung zu den Somat Smartwash Cloud-Servern fehlgeschlagen.",
+      "unknown": "Unerwarteter Fehler. Bitte Home Assistant Logs prüfen."
+    },
+    "abort": {
+      "already_configured": "Dieses Somat-Konto ist bereits konfiguriert.",
+      "reauth_successful": "Neu-Authentifizierung war erfolgreich."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "detergent_fill_level": {
+        "name": "Reiniger-Füllstand"
+      },
+      "wash_cycle_status": {
+        "name": "Spülstatus"
+      },
+      "program": {
+        "name": "Aktives Programm"
+      },
+      "refill_status": {
+        "name": "Kartuschen-Status"
+      },
+      "water_hardness": {
+        "name": "Wasserhärte"
+      },
+      "wifi_rssi": {
+        "name": "WLAN-Signal"
+      },
+      "wash_cycle_count": {
+        "name": "Spülgänge gesamt"
+      },
+      "refill_count": {
+        "name": "Verbrauchte Kartuschen"
+      }
+    },
+    "binary_sensor": {
+      "battery_low": {
+        "name": "Batterie schwach"
+      },
+      "refill_needed": {
+        "name": "Kartusche nachfüllen"
+      },
+      "washing": {
+        "name": "Spülvorgang aktiv"
+      },
+      "connected": {
+        "name": "Cloud verbunden"
+      }
+    },
+    "select": {
+      "program_select": {
+        "name": "Dosierprogramm",
+        "state": {
+          "intense": "Intensiv",
+          "eco": "Eco",
+          "auto": "Auto",
+          "standard": "Standard"
+        }
+      }
+    }
+  }
+}

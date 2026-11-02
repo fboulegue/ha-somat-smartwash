@@ -1,0 +1,83 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Somat Smartwash",
+        "description": "Enter your Somat Smartwash account credentials (email and password used in the mobile app).",
+        "data": {
+          "email": "Email Address",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate Somat Smartwash",
+        "description": "Please enter your password again for {email} to restore the connection.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid email or password. Please verify your credentials.",
+      "cannot_connect": "Failed to connect to Somat Smartwash cloud servers.",
+      "unknown": "Unexpected error occurred. Please check Home Assistant logs."
+    },
+    "abort": {
+      "already_configured": "This Somat account is already configured.",
+      "reauth_successful": "Re-authentication was successful."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "detergent_fill_level": {
+        "name": "Detergent fill level"
+      },
+      "wash_cycle_status": {
+        "name": "Wash cycle status"
+      },
+      "program": {
+        "name": "Active program"
+      },
+      "refill_status": {
+        "name": "Refill status"
+      },
+      "water_hardness": {
+        "name": "Water hardness"
+      },
+      "wifi_rssi": {
+        "name": "Wi-Fi signal"
+      },
+      "wash_cycle_count": {
+        "name": "Total wash cycles"
+      },
+      "refill_count": {
+        "name": "Refills used"
+      }
+    },
+    "binary_sensor": {
+      "battery_low": {
+        "name": "Battery low"
+      },
+      "refill_needed": {
+        "name": "Refill needed"
+      },
+      "washing": {
+        "name": "Washing cycle active"
+      },
+      "connected": {
+        "name": "Cloud connected"
+      }
+    },
+    "select": {
+      "program_select": {
+        "name": "Dosing program",
+        "state": {
+          "intense": "Intense",
+          "eco": "Eco",
+          "auto": "Auto",
+          "standard": "Standard"
+        }
+      }
+    }
+  }
+}
