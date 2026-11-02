@@ -1,10 +1,10 @@
 # Somat Smartwash Integration for Home Assistant
 
-[![HACS Validation](https://github.com/fabianboulegue/ha-somat-smartwash/actions/workflows/validate.yml/badge.svg)](https://github.com/fabianboulegue/ha-somat-smartwash/actions/workflows/validate.yml)
+[![HACS Validation](https://github.com/fboulegue/ha-somat-smartwash/actions/workflows/validate.yml/badge.svg)](https://github.com/fboulegue/ha-somat-smartwash/actions/workflows/validate.yml)
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
-[![GitHub Release](https://img.shields.io/github/v/release/fabianboulegue/ha-somat-smartwash?include_prereleases&color=blue)](https://github.com/fabianboulegue/ha-somat-smartwash/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/fboulegue/ha-somat-smartwash?include_prereleases&color=blue)](https://github.com/fboulegue/ha-somat-smartwash/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/fabianboulegue/ha-somat-smartwash)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/fboulegue/ha-somat-smartwash)
 
 Custom integration for Home Assistant to monitor and control the **Henkel Somat Smartwash** automatic dishwasher dosing device.
 
@@ -78,7 +78,7 @@ Home Assistant communicates asynchronously with Henkel's cloud API, allowing ins
 1. Ensure [HACS (Home Assistant Community Store)](https://hacs.xyz/) is installed.
 2. In Home Assistant, navigate to **HACS** → **Integrations**.
 3. Click the three dots (top right) → **Custom repositories**.
-4. Enter repository URL: `https://github.com/fabianboulegue/ha-somat-smartwash`
+4. Enter repository URL: `https://github.com/fboulegue/ha-somat-smartwash`
 5. Select category: **Integration**.
 6. Click **Add**, find **Somat Smartwash**, and click **Download**.
 7. Restart Home Assistant.
@@ -198,7 +198,7 @@ The Henkel Somat Smartwash platform uses:
 ## 🤝 Contributing
 
 Contributions, bug reports, and feature requests are welcome!
-Feel free to open an issue or submit a pull request on [GitHub](https://github.com/fabianboulegue/ha-somat-smartwash).
+Feel free to open an issue or submit a pull request on [GitHub](https://github.com/fboulegue/ha-somat-smartwash).
 
 ---
 

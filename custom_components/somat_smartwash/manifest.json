@@ -1,12 +1,12 @@
 {
   "domain": "somat_smartwash",
   "name": "Somat Smartwash",
-  "codeowners": ["@fabianboulegue"],
+  "codeowners": ["@fboulegue"],
   "config_flow": true,
-  "documentation": "https://github.com/fabianboulegue/ha-somat-smartwash",
+  "documentation": "https://github.com/fboulegue/ha-somat-smartwash",
   "integration_type": "hub",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/fabianboulegue/ha-somat-smartwash/issues",
+  "issue_tracker": "https://github.com/fboulegue/ha-somat-smartwash/issues",
   "requirements": [],
   "version": "1.0.0"
 }
