@@ -1,6 +1,9 @@
 {
   "domain": "somat_smartwash",
   "name": "Somat Smartwash",
+  "categories": [
+    "appliances_cleaning.cleaning"
+  ],
   "codeowners": [
     "@fboulegue"
   ],
@@ -10,8 +13,5 @@
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/fboulegue/ha-somat-smartwash/issues",
   "requirements": [],
-  "version": "1.0.1",
-  "categories": [
-    "appliances_cleaning.cleaning"
-  ]
+  "version": "1.0.1"
 }
